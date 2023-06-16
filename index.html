@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
 <link href="style.css" rel="stylesheet">
-<title>Santa's Matching Game</title>
+<title>Santas-Matching-Game</title>
 </head>
 <body>
-  <h1 class="page-title">Santa's Matching Game</h1>
+  <h1 class="page-title">Santas-Matching-Game</h1>
+  <div class="overlay-text visible">
+    Click to Start!
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    Try Again!
+    <span class="overlay-text-small">Click to Restart!</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    Victory!
+    <span class="overlay-text-small">Click to Restart!</span>
+  </div>
 
   <!-- Game Stuff Besides Cards -->
   <div class="game-container">
@@ -21,33 +32,297 @@
     <!-- Cards -->
     <div class="card-parent">
 
-      <div class="card">
+        <!-- Christmas Ball Cards -->
+
+
+      <div class="card visible">
         <div class="card-back card-face">
           <img class="snowflake" src="Assets/Images/snowflake.png">
         </div>
         <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-ball.png">
 
         </div>
       </div>
 
 
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-ball.png">
+
+        </div>
+      </div>
+
+        <!-- Bell Cards -->
+
+
+     <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-bell.png">
+
+        </div>
+      </div>
+
+
+
+     <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-bell.png">
+
+        </div>
+      </div>
+
+        <!-- Sock Cards  -->
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-sock.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-sock.png">
+
+        </div>
+      </div>
+
+
+        <!-- Wreath Cards  -->
+
+
+     <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-wreath.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/christmas-wreath.png">
+
+        </div>
+      </div>
+
+              <!-- Cookie Cards  -->
+
+
+     <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/cookie.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/cookie.png">
+
+        </div>
+      </div>
+
+              <!-- Decoration Cards  -->      
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/decoration.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/decoration.png">
+
+        </div>
+      </div>
+
+             <!-- Frost Cards  -->      
+
+
+     <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/frost.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/frost.png">
+
+        </div>
+      </div>
+
+            <!-- giftbox Cards  -->    
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/giftbox.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/giftbox.png">
+
+        </div>
+      </div>
+
+                  <!-- Reindeer Cards  -->   
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/reindeer.png">
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/reindeer.png">
+
+        </div>
+      </div>
+
+                <!-- Santa Claus Cards  -->   
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/santa-claus.png">
+
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/santa-claus.png">
+
+        </div>
+      </div>
+
+               <!-- Santa Hat Cards  -->  
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/santa-hat.png">
+
+        </div>
+      </div>
+
+       <div class="card">
+          <div class="card-back card-face">
+            <img class="snowflake" src="Assets/Images/snowflake.png">
+            </div>
+          <div class="card-front card-face">
+            <img class="card-value" src="Assets/Images/santa-hat.png">
+
+
+        </div>
+      </div>
+
+             <!-- Mistletoe Cards  -->  
+
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="snowflake" src="Assets/Images/snowflake.png">
+          </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="Assets/Images/mistletoe.png">
+
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/snowflake.png">
+        </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="Assets/Images/mistletoe.png">
+
+
     </div>
   </div>
+
+
+    </div>
+  </div>
+  <script src="script.js" async></script>
 </body>
 
 

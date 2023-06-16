@@ -1,112 +1,200 @@
 @font-face {
-    font-family: "Dancing-Bold";
-    src: url("Assets/Fonts/Dancing-Bold.ttf") format('truetype');
+  font-family: "Dancing-Bold";
+  src: url("Assets/Fonts/Dancing-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MofC-Bold";
+  src: url("Assets/Fonts/MofC-Bold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#f2f3f8, #58b69b);
+}
+
+.page-title {
+  color: aliceblue;
+  font-family: MofC-Bold, serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 6em;
+}
+
+.game-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 50px;
+  justify-content: center;
+}
+
+.game-info-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  perspective: 500px;
+}
+
+.game-info {
+  color: aliceblue;
+  font-size: 4em;
+  font-family: Dancing-Bold, serif;
+}
+
+.card-parent {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+
+  height: 175px;
+  width: 125px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: transform 500ms;
+  background-color: #d33943;
+}
+
+.card-back {
+  border: 8px solid aliceblue;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  background-color: aliceblue;
+  border-color: aliceblue;
+}
+
+.snowflake {
+  align-self: flex-start;
+  transform: translateY(10);
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.card-value {
+  align-self: flex-start;
+  transform: translateY(10);
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  background-color: #d33943;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.card:hover.card-back {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-front {
+  transform: rotateY(0);
+}
+
+.card:hover .card-back {
+  transform: rotateY(-180deg);
+}
+
+.card:hover {
+  animation: dance 1s linear infinite 500ms;
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: rotate(0);
   }
 
-  @font-face {
-    font-family: "MofC-Bold";
-    src: url("Assets/Fonts/MofC-Bold.ttf") format('truetype');
+  25% {
+    transform: rotate(-7deg);
   }
 
-  * {
-    box-sizing: border-box;
+  75% {
+    transform: rotate(7deg);
+  }
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: aliceblue;
+  font-family: "MofC-Bold", serif;
+}
+
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+  flex-direction: column;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
   }
 
-  html {
-    min-height: 100vh;
+  to {
+    font-size: 10em;
+    background-color: rgba(0, 0, 0, 0.8);
   }
+}
 
-  body {
-    margin: 0;
-    background: radial-gradient(#f2f3f8, #58b69b);
-  }
+.overlay-text-small {
+  font-size: 0.3em;
+}
 
-  .page-title {
-    color: aliceblue;
-    font-family: MofC-Bold, serif;
-    font-weight: normal;
-    text-align: center;
-    font-size: 6em;
-  }
-
-  .game-container {
-    text-align: center;
-    margin-bottom: 20px;
-    margin: 50px;
-    justify-content: center;
+@media (max-width: 600px) {
+  .card-parent {
+    grid-template-columns: repeat(2, auto);
   }
 
   .game-info-container {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .game-info {
-    color: aliceblue;
-    font-size: 4em;
-    font-family: Dancing-Bold, serif;
-  }
-
-  .card-parent {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 50px;
-    justify-content: center;
   }
-
-  .card {
-    position: relative;
-    background-color: #d33943;
-    height: 175px;
-    width: 125px;
-    overflow: hidden;
-    border-radius: 10px;
-
-  }
-
-  .card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backface-visibility: hidden;
-
-  }
-
-  .card-back {
-    border: 8px solid  aliceblue;
-    border-color: aliceblue;
-  }
-
-
-  .card-front {
-    transform: rotateX(180deg);
-  }
-
-  .snowflake {
-    align-self: flex-start;
-    transform: translateY(10);
-    width: 100%;
-    height: auto;
-    margin-top: 25px;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-  }
-
-
-
-
-  .card:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transition: .3s ease;
-  }
+}
